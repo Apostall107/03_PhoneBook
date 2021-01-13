@@ -41,13 +41,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Categoty_box = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Delete_Button = new System.Windows.Forms.Button();
-            this.Update_Button = new System.Windows.Forms.Button();
             this.FirstNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhNumColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete_Button = new System.Windows.Forms.Button();
+            this.Update_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +101,7 @@
             this.Add_Button.TabIndex = 6;
             this.Add_Button.Text = "Add";
             this.Add_Button.UseVisualStyleBackColor = true;
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // label1
             // 
@@ -180,24 +181,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(543, 244);
             this.dataGridView1.TabIndex = 12;
             // 
-            // Delete_Button
-            // 
-            this.Delete_Button.Location = new System.Drawing.Point(293, 123);
-            this.Delete_Button.Name = "Delete_Button";
-            this.Delete_Button.Size = new System.Drawing.Size(111, 47);
-            this.Delete_Button.TabIndex = 5;
-            this.Delete_Button.Text = "Delete";
-            this.Delete_Button.UseVisualStyleBackColor = true;
-            // 
-            // Update_Button
-            // 
-            this.Update_Button.Location = new System.Drawing.Point(443, 123);
-            this.Update_Button.Name = "Update_Button";
-            this.Update_Button.Size = new System.Drawing.Size(111, 47);
-            this.Update_Button.TabIndex = 6;
-            this.Update_Button.Text = "Update";
-            this.Update_Button.UseVisualStyleBackColor = true;
-            // 
             // FirstNameColumn
             // 
             this.FirstNameColumn.HeaderText = "First Name";
@@ -227,6 +210,24 @@
             this.CategoryColumn.HeaderText = "Category";
             this.CategoryColumn.Name = "CategoryColumn";
             this.CategoryColumn.ReadOnly = true;
+            // 
+            // Delete_Button
+            // 
+            this.Delete_Button.Location = new System.Drawing.Point(293, 123);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(111, 47);
+            this.Delete_Button.TabIndex = 5;
+            this.Delete_Button.Text = "Delete";
+            this.Delete_Button.UseVisualStyleBackColor = true;
+            // 
+            // Update_Button
+            // 
+            this.Update_Button.Location = new System.Drawing.Point(443, 123);
+            this.Update_Button.Name = "Update_Button";
+            this.Update_Button.Size = new System.Drawing.Size(111, 47);
+            this.Update_Button.TabIndex = 6;
+            this.Update_Button.Text = "Update";
+            this.Update_Button.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
