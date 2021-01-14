@@ -143,7 +143,7 @@ namespace _03_PhoneBook
 
             connection.Close();//SqlDataAdapter has no need in opening/closing con
 
-            MessageBox.Show("Succssfully added!");
+            MessageBox.Show("Succssfully updated!");
 
 
             ResetTextFields();
