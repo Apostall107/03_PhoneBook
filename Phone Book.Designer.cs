@@ -41,13 +41,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Categoty_box = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Delete_Button = new System.Windows.Forms.Button();
+            this.Update_Button = new System.Windows.Forms.Button();
+            this.Search_txt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.FirstNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhNumColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete_Button = new System.Windows.Forms.Button();
-            this.Update_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,9 +87,9 @@
             // 
             // Clear_Button
             // 
-            this.Clear_Button.Location = new System.Drawing.Point(293, 31);
+            this.Clear_Button.Location = new System.Drawing.Point(337, 86);
             this.Clear_Button.Name = "Clear_Button";
-            this.Clear_Button.Size = new System.Drawing.Size(111, 47);
+            this.Clear_Button.Size = new System.Drawing.Size(245, 47);
             this.Clear_Button.TabIndex = 5;
             this.Clear_Button.Text = "Clear";
             this.Clear_Button.UseVisualStyleBackColor = true;
@@ -95,9 +97,9 @@
             // 
             // Add_Button
             // 
-            this.Add_Button.Location = new System.Drawing.Point(443, 31);
+            this.Add_Button.Location = new System.Drawing.Point(285, 26);
             this.Add_Button.Name = "Add_Button";
-            this.Add_Button.Size = new System.Drawing.Size(111, 47);
+            this.Add_Button.Size = new System.Drawing.Size(103, 47);
             this.Add_Button.TabIndex = 6;
             this.Add_Button.Text = "Add";
             this.Add_Button.UseVisualStyleBackColor = true;
@@ -155,6 +157,7 @@
             // 
             // Categoty_box
             // 
+            this.Categoty_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Categoty_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Categoty_box.FormattingEnabled = true;
             this.Categoty_box.Items.AddRange(new object[] {
@@ -169,6 +172,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FirstNameColumn,
@@ -176,64 +181,98 @@
             this.PhNumColumn,
             this.EmailColumn,
             this.CategoryColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 194);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 207);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 244);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(606, 265);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            // 
+            // Delete_Button
+            // 
+            this.Delete_Button.Location = new System.Drawing.Point(519, 26);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(103, 47);
+            this.Delete_Button.TabIndex = 5;
+            this.Delete_Button.Text = "Delete";
+            this.Delete_Button.UseVisualStyleBackColor = true;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
+            // 
+            // Update_Button
+            // 
+            this.Update_Button.Location = new System.Drawing.Point(402, 28);
+            this.Update_Button.Name = "Update_Button";
+            this.Update_Button.Size = new System.Drawing.Size(103, 47);
+            this.Update_Button.TabIndex = 6;
+            this.Update_Button.Text = "Update";
+            this.Update_Button.UseVisualStyleBackColor = true;
+            this.Update_Button.Click += new System.EventHandler(this.Update_Button_Click);
+            // 
+            // Search_txt
+            // 
+            this.Search_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Search_txt.Location = new System.Drawing.Point(394, 179);
+            this.Search_txt.Name = "Search_txt";
+            this.Search_txt.Size = new System.Drawing.Size(224, 22);
+            this.Search_txt.TabIndex = 13;
+            this.Search_txt.TextChanged += new System.EventHandler(this.Search_txt_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(334, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Search:";
             // 
             // FirstNameColumn
             // 
+            this.FirstNameColumn.FillWeight = 200F;
             this.FirstNameColumn.HeaderText = "First Name";
             this.FirstNameColumn.Name = "FirstNameColumn";
             this.FirstNameColumn.ReadOnly = true;
             // 
             // LastNameColumn
             // 
+            this.LastNameColumn.FillWeight = 200F;
             this.LastNameColumn.HeaderText = "Last Name";
             this.LastNameColumn.Name = "LastNameColumn";
             this.LastNameColumn.ReadOnly = true;
             // 
             // PhNumColumn
             // 
+            this.PhNumColumn.FillWeight = 200F;
             this.PhNumColumn.HeaderText = "Ph.Num";
             this.PhNumColumn.Name = "PhNumColumn";
             this.PhNumColumn.ReadOnly = true;
+            this.PhNumColumn.Width = 150;
             // 
             // EmailColumn
             // 
+            this.EmailColumn.FillWeight = 300F;
             this.EmailColumn.HeaderText = "E-Mail";
             this.EmailColumn.Name = "EmailColumn";
             this.EmailColumn.ReadOnly = true;
+            this.EmailColumn.Width = 150;
             // 
             // CategoryColumn
             // 
+            this.CategoryColumn.FillWeight = 200F;
             this.CategoryColumn.HeaderText = "Category";
             this.CategoryColumn.Name = "CategoryColumn";
             this.CategoryColumn.ReadOnly = true;
-            // 
-            // Delete_Button
-            // 
-            this.Delete_Button.Location = new System.Drawing.Point(293, 123);
-            this.Delete_Button.Name = "Delete_Button";
-            this.Delete_Button.Size = new System.Drawing.Size(111, 47);
-            this.Delete_Button.TabIndex = 5;
-            this.Delete_Button.Text = "Delete";
-            this.Delete_Button.UseVisualStyleBackColor = true;
-            // 
-            // Update_Button
-            // 
-            this.Update_Button.Location = new System.Drawing.Point(443, 123);
-            this.Update_Button.Name = "Update_Button";
-            this.Update_Button.Size = new System.Drawing.Size(111, 47);
-            this.Update_Button.TabIndex = 6;
-            this.Update_Button.Text = "Update";
-            this.Update_Button.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 450);
+            this.ClientSize = new System.Drawing.Size(625, 484);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Search_txt);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Categoty_box);
             this.Controls.Add(this.label5);
@@ -259,21 +298,23 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox First_Name_txt;
-        private System.Windows.Forms.TextBox Last_Name_txt;
-        private System.Windows.Forms.TextBox PhNum_txt;
-        private System.Windows.Forms.TextBox Email_txt;
-        private System.Windows.Forms.Button Clear_Button;
-        private System.Windows.Forms.Button Add_Button;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox Categoty_box;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button Delete_Button;
-        private System.Windows.Forms.Button Update_Button;
+        public System.Windows.Forms.TextBox First_Name_txt;
+        public System.Windows.Forms.TextBox Last_Name_txt;
+        public System.Windows.Forms.TextBox PhNum_txt;
+        public System.Windows.Forms.TextBox Email_txt;
+        public System.Windows.Forms.Button Clear_Button;
+        public System.Windows.Forms.Button Add_Button;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.ComboBox Categoty_box;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button Delete_Button;
+        public System.Windows.Forms.Button Update_Button;
+        public System.Windows.Forms.TextBox Search_txt;
+        public System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhNumColumn;
